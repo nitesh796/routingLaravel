@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PingController extends Controller
 {
     public function ping(){
-        return view('pages.ping');
+        return "<h1>Pong</h1>";
     }
 }
