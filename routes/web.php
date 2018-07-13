@@ -15,4 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ping', 'PingController@ping');
+Route::get('/ping', 'DemoController@ping');
+
+Route::get('/info/{id}/{page?}', function($id, $page = null){
+    if (!$page) {
+        return 'This is the page with an id ' . $id;
+    } else {
+        return 'This is ' . $page . ' page with and id ' . $id;
+    }
+});
